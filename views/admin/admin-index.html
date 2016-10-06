@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TreinoWeb</title>
+        <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/main.source.css">
+        <link rel="stylesheet" href="../../css/custom.css">
+
+
+        <!-- especifico desta página -->
+        <link href="../../css/lib/charts-c3js/c3.min.css" rel="stylesheet" type="text/css">
+
+    </head>
+    <body class="with-side-menu wet-aspalt-theme">
+
+        <header class="site-header">
+            <div class="container-fluid">
+                <a href="#" class="site-logo"> <img class="hidden-md-down" src="../../img/logo-tw-w-md.png" alt="">
+                    <img class="hidden-lg-up" src="../../img/sign-tw-w-md.png" alt=""> </a>
+                <button class="hamburger hamburger--htla">
+                    <span>menu</span>
+                </button>
+                <div class="site-header-content">
+                    <div class="site-header-content-in">
+                        <div class="site-header-shown">
+                            <div class="dropdown dropdown-notification notif">
+                                <a href="#" class="header-alarm dropdown-toggle active" id="dd-notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="font-icon-alarm"></i> </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
+                                    <div class="dropdown-menu-notif-header">
+                                        Avisos <span class="label label-pill label-danger">4</span>
+                                    </div>
+                                    <div class="dropdown-menu-notif-list">
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-1.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Morgan</a> was bothering about something
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-2.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Lioneli</a> had commented on this
+                                            <a href="#">Super Important Thing</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-3.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-4.jpg" alt="">
+                                            </div>
+                                            <a href="#">Lionely</a> wants to go to
+                                            <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu-notif-more">
+                                        <a href="#">Ver todos</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown user-menu">
+                                <div class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="../../img/avatar-2-64.png" alt="">
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Profile</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Settings</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Help</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>
+                                </div>
+                            </div>
+
+
+                            <button type="button" class="burger-right">
+                                <i class="font-icon-menu-addl"></i>
+                            </button>
+                        </div><!--.site-header-shown-->
+
+                        <div class="mobile-menu-right-overlay"></div>
+                        <div class="site-header-collapsed">
+                            <div class="site-header-collapsed-in">
+                                <div class="dropdown dropdown-typical">
+                                    <a class="dropdown-toggle" id="dd-header-atletas" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-users"></span> <span class="lbl">Atletas</span> </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dd-header-atletas">
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown dropdown-typical">
+                                    <a class="dropdown-toggle" id="dd-header-agenda" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-calendar"></span> <span class="lbl">Agenda</span>
+                                        <span class="label label-pill label-danger">5</span> </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dd-header-agenda">
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal, Quant and Verbal</a>
+                                        <div class="context-menu-separator"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal</a>
+                                        <div class="context-menu-separator"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal</a>
+                                        <div class="context-menu-separator"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown dropdown-typical">
+                                    <a class="dropdown-toggle" id="dd-header-atletas" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-bar-chart"></span> <span class="lbl">Administrativo</span>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dd-header-atletas">
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+                                    </div>
+                                </div>
+                            </div><!--.site-header-collapsed-in-->
+                        </div><!--.site-header-collapsed-->
+                    </div><!--site-header-content-in-->
+                </div><!--.site-header-content-->
+            </div><!--.container-fluid-->
+        </header><!--.site-header-->
+
+        <div class="mobile-menu-left-overlay"></div>
+
+        <nav class="side-menu">
+            <div class="avatar-admin">
+                <img class="img-adaptative" src="../../img/logo-runway.jpg">
+            </div>
+            <header class="side-menu-title mt-md">
+                Opções
+            </header>
+
+            <ul class="side-menu-list">
+
+                <li class="gold">
+                    <a href="#"> <span class="lbl">Visão geral</span> </a>
+                </li>
+                <li class="gold">
+                    <a href="#"> <span class="lbl">Atletas</span> </a>
+                </li>
+                <li class="gold">
+                    <a href="#"> <span class="lbl">Treinadores</span> </a>
+                </li>
+                <li class="gold">
+                    <a href="#"> <span class="lbl">Agenda</span> </a>
+                </li>
+                <li class="gold">
+                    <a href="#"> <span class="lbl">Financeiro</span> </a>
+                </li>
+            </ul>
+            <header class="side-menu-title mt-md">
+                Conta
+            </header>
+            <ul class="side-menu-list">
+                <li class="gold">
+                    <a href="#"> <span class="lbl">Dados da conta</span> </a>
+                </li>
+                <li class="gold">
+                    <a href="#"> <span class="lbl">Compartilhamento da conta</span> </a>
+                </li>
+            </ul>
+
+        </nav><!--.side-menu-->
+
+        <div class="page-content">
+            <div class="container-fluid">
+                <section>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="chart-statistic-box">
+                                <div class="chart-txt">
+                                    <div class="chart-txt-top">
+                                        <p><span class="unit">R$</span><span class="number">1540</span></p>
+                                        <p class="caption">Faturamento 11/2016</p>
+                                    </div>
+                                    <table class="tbl-data">
+                                        <tr>
+                                            <td class="price color-green">R$ 2200,00</td>
+                                            <td><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="price color-red">- R$ 600,00</td>
+                                            <td><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="chart-container">
+                                    <div class="chart-container-in">
+                                        <div id="chart_div"></div>
+                                        <header class="chart-container-title">Média semanal</header>
+                                        <div class="chart-container-x">
+                                            <div class="item"></div>
+                                            <div class="item">Seg</div>
+                                            <div class="item">Ter</div>
+                                            <div class="item">Qua</div>
+                                            <div class="item">Qui</div>
+                                            <div class="item">Sex</div>
+                                            <div class="item">Sáb</div>
+                                            <div class="item">Dom</div>
+                                            <div class="item"></div>
+                                        </div>
+                                        <div class="chart-container-y">
+                                            <div class="item">300</div>
+                                            <div class="item"></div>
+                                            <div class="item">250</div>
+                                            <div class="item"></div>
+                                            <div class="item">200</div>
+                                            <div class="item"></div>
+                                            <div class="item">150</div>
+                                            <div class="item"></div>
+                                            <div class="item">100</div>
+                                            <div class="item"></div>
+                                            <div class="item">50</div>
+                                            <div class="item"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--.chart-statistic-box-->
+                        </div><!--.col-->
+                        <div class="col-sm-3">
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-6">
+                                    <article class="statistic-box green">
+                                        <div>
+                                            <div class="number">
+                                                <img class="img-adaptative" src="../../img/icons/running-man-w-sm.png"> 26
+                                            </div>
+                                            <div class="caption">
+                                                <div>Atletas</div>
+                                            </div>
+                                            <div class="percent">
+                                                <div class="arrow up"></div>
+                                                <p>15%</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div><!--.col-->
+                                <div class="col-sm-12 col-xs-6">
+                                    <article class="statistic-box yellow">
+                                        <div>
+                                            <div class="number">
+                                                <img class="img-adaptative" src="../../img/icons/coach-man-w-sm.png"> 12
+                                            </div>
+                                            <div class="caption">
+                                                <div>Treinadores</div>
+                                            </div>
+                                            <div class="percent">
+                                                <div class="arrow down"></div>
+                                                <p>11%</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div><!--.col-->
+
+                            </div><!--.row-->
+                        </div><!--.col-->
+                    </div><!--.row-->
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <section class="card">
+                                <header class="card-header">
+                                    <h5>Receita mensal</h5>
+                                </header>
+                                <div class="card-block">
+                                    <div class="divider-bottom">
+                                        <div id="donut-chart"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4 mt-sm">
+                                            <input type="text" class="form-control form-control-sm datetimepicker fontsize-sm" placeholder="00/00/0000">
+                                        </div>
+                                        <div class="col-lg-1 mt-sm">
+                                            a
+                                        </div>
+                                        <div class="col-lg-4 mt-sm">
+                                            <input type="text" class="form-control form-control-sm datetimepicker fontsize-sm" placeholder="00/00/0000">
+                                        </div>
+                                        <div class="col-lg-2 mt-sm">
+                                            <button type="submit" class="btn btn-sm btn-primary fontsize-sm">ok</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-md-8">
+                            <section class="box-typical">
+                                <header class="box-typical-header">
+                                    <div class="tbl-row">
+                                        <div class="tbl-cell">
+                                            <h5>Risco de evasão</h5>
+                                        </div>
+                                        <div class="tbl-cell tbl-cell-action-bordered">
+                                            <button type="button" class="action-btn">
+                                                <i class="font-icon font-icon-pencil"></i></button>
+                                        </div>
+                                        <div class="tbl-cell tbl-cell-action-bordered">
+                                            <button type="button" class="action-btn">
+                                                <i class="font-icon font-icon-re"></i></button>
+                                        </div>
+                                        <div class="tbl-cell tbl-cell-action-bordered">
+                                            <button type="button" class="action-btn">
+                                                <i class="font-icon font-icon-trash"></i></button>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="box-typical-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="table-check">
+                                                        <div class="checkbox checkbox-only">
+                                                            <input type="checkbox" id="table-check-head"/>
+                                                            <label for="table-check-head"></label>
+                                                        </div>
+                                                    </th>
+                                                    <th></th>
+                                                    <th>Nome</th>
+                                                    <th>Risco
+                                                        <span class="hint-circle" data-toggle="tooltip" data-placement="top" title="Help">?</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="table-check">
+                                                        <div class="checkbox checkbox-only">
+                                                            <input type="checkbox" id="table-check-1"/>
+                                                            <label for="table-check-1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-photo">
+                                                        <img src="../../img/photo-64-1.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <p>Roberto da Silva Nogueira <br>
+                                                            <small>Treinador: Ricardo Justino</small>
+                                                        </p>
+
+                                                    </td>
+                                                    <td class="color-blue-grey-lighter">
+                                                        4 ausências <span class="caret caret-up color-green"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-check">
+                                                        <div class="checkbox checkbox-only">
+                                                            <input type="checkbox" id="table-check-1"/>
+                                                            <label for="table-check-1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-photo">
+                                                        <img src="../../img/photo-64-1.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <p><a href="#">Roberto da Silva Nogueira</a> <br>
+                                                            <small>Treinador: Ricardo Justino</small>
+                                                        </p>
+
+                                                    </td>
+                                                    <td class="color-blue-grey-lighter">
+                                                        4 ausências <span class="caret caret-up color-green"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-check">
+                                                        <div class="checkbox checkbox-only">
+                                                            <input type="checkbox" id="table-check-1"/>
+                                                            <label for="table-check-1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-photo">
+                                                        <img src="../../img/photo-64-2.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <p><a href="#">Roberto da Silva Nogueira</a> <br>
+                                                            <small>Treinador: Ricardo Justino</small>
+                                                        </p>
+
+                                                    </td>
+                                                    <td class="color-blue-grey-lighter">
+                                                        4 ausências <span class="caret caret-up color-green"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-check">
+                                                        <div class="checkbox checkbox-only">
+                                                            <input type="checkbox" id="table-check-1"/>
+                                                            <label for="table-check-1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-photo">
+                                                        <img src="../../img/photo-64-3.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <p><a href="#">Roberto da Silva Nogueira</a> <br>
+                                                            <small>Treinador: Ricardo Justino</small>
+                                                        </p>
+
+                                                    </td>
+                                                    <td class="color-blue-grey-lighter">
+                                                        4 ausências <span class="caret caret-up color-green"></span>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div><!--.page-content-->
+
+        <script src="../../js/lib/jquery/jquery.min.js"></script>
+        <script src="../../js/lib/tether/tether.min.js"></script>
+        <script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
+        <script src="../../js/plugins.js"></script>
+        <script src="../../js/app.js"></script>
+
+        <!-- específico desta página -->
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="../../js/lib/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+
+
+        <script src="../../js/lib/d3/d3.min.js"></script>
+        <script src="../../js/lib/charts-c3js/c3.min.js"></script>
+        <script src="../../js/lib/charts-c3js/c3js-init.js"></script>
+
+
+        <script src="admin-index.js"></script>
+
+    </body>
+</html>
