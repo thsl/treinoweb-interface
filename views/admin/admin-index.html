@@ -78,11 +78,11 @@
                                     <img src="../../img/avatar-2-64.png" alt="">
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
-                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Profile</a>
-                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Settings</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalTrocaAssessoria"><i class="font-icon fa fa-refresh" aria-hidden="true"></i>Trocar assessoria</a>
+                                    <!--<a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Settings</a>
                                     <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Help</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>-->
                                 </div>
                             </div>
 
@@ -155,8 +155,15 @@
         <nav class="side-menu">
             <div class="avatar-admin">
                 <img class="img-adaptative" src="../../img/logo-runway.jpg">
+
+                <div class="divider-top">
+                    <p>
+                        Treinador<br>
+                        <a class="fontsize-sm" href="#" data-toggle="modal" data-target="#ModalTrocaAssessoria"><i class="fa fa-refresh" aria-hidden="true"></i> Trocar assessoria</a>
+                    </p>
+                </div>
             </div>
-            <header class="side-menu-title mt-md">
+            <header class="side-menu-title">
                 Opções
             </header>
 
@@ -171,7 +178,8 @@
                         <i class="fa demo-icon icon-pitch" aria-hidden="true"></i> Atletas</span> </a>
                 </li>
                 <li class="grey">
-                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-notebook" aria-hidden="true"></i> Treinadores</span> </a>
+                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-notebook" aria-hidden="true"></i> Treinadores</span>
+                    </a>
                 </li>
                 <li class="grey">
                     <a href="#"> <span class="lbl"><i class="fa fa-calendar" aria-hidden="true"></i> Agenda</span> </a>
@@ -185,10 +193,13 @@
             </header>
             <ul class="side-menu-list">
                 <li class="grey">
-                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-edit" aria-hidden="true"></i> Dados da conta</span> </a>
+                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-edit" aria-hidden="true"></i> Dados da conta</span>
+                    </a>
                 </li>
                 <li class="grey">
-                    <a href="#"> <span class="lbl"><i class="fa fa-user-plus" aria-hidden="true"></i> Compartilhamento da conta</span> </a>
+                    <a href="#">
+                        <span class="lbl"><i class="fa fa-user-plus" aria-hidden="true"></i> Compartilhamento</span>
+                    </a>
                 </li>
             </ul>
 
@@ -447,6 +458,91 @@
                 </section>
             </div>
         </div><!--.page-content-->
+
+
+        <div class="modal fade" id="ModalTrocaAssessoria" tabindex="-1" role="dialog" aria-labelledby="ModalTrocaAssessoria" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+                            <i class="font-icon-close-2"></i>
+                        </button>
+                        <h4 class="modal-title">Selecione a assessoria</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <section class="widget widget-simple-sm">
+                                    <div class="widget-simple-sm-statistic">
+                                        <p class="text-left"><h5>Academia RunWay</h5></p><a href="#">
+                                        <img class="img-adaptative" src="../../img/logo-runway.jpeg"> </a>
+                                    </div>
+                                    <div class="widget-simple-sm-bottom text-left">
+                                        <div class="user-card-row">
+                                            <div class="tbl-row">
+                                                <div class="tbl-cell tbl-cell-photo">
+                                                    <a href="#"> <img src="../../img/photo-64-2.jpg"> </a>
+                                                </div>
+                                                <div class="tbl-cell">
+                                                    <p class="user-card-row-name"><a href="#">Maurício Silva</a></p>
+                                                    <p class="user-card-row-location">Participa como
+                                                        <strong>Treinador</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="col-md-4">
+                                <section class="widget widget-simple-sm">
+                                    <div class="widget-simple-sm-statistic">
+                                        <p class="text-left"><h5>Academia RunWay</h5></p><a href="#">
+                                        <img class="img-adaptative" src="../../img/logo-runway.jpeg"> </a>
+                                    </div>
+                                    <div class="widget-simple-sm-bottom text-left">
+                                        <div class="user-card-row">
+                                            <div class="tbl-row">
+                                                <div class="tbl-cell tbl-cell-photo">
+                                                    <a href="#"> <img src="../../img/photo-64-2.jpg"> </a>
+                                                </div>
+                                                <div class="tbl-cell">
+                                                    <p class="user-card-row-name"><a href="#">Maurício Silva</a></p>
+                                                    <p class="user-card-row-location">Participa como
+                                                        <strong>Aluno</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="col-md-4">
+                                <section class="widget widget-simple-sm">
+                                    <div class="widget-simple-sm-statistic">
+                                        <p class="text-left"><h5>Academia RunWay</h5></p><a href="#">
+                                        <img class="img-adaptative" src="../../img/logo-runway.jpeg"> </a>
+                                    </div>
+                                    <div class="widget-simple-sm-bottom text-left">
+                                        <div class="user-card-row">
+                                            <div class="tbl-row">
+                                                <div class="tbl-cell tbl-cell-photo">
+                                                    <a href="#"> <img src="../../img/photo-64-2.jpg"> </a>
+                                                </div>
+                                                <div class="tbl-cell">
+                                                    <p class="user-card-row-name"><a href="#">Maurício Silva</a></p>
+                                                    <p class="user-card-row-location">Participa como
+                                                        <strong>Administrador</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--.modal -->
+
 
         <script src="../../js/lib/jquery/jquery.min.js"></script>
         <script src="../../js/lib/tether/tether.min.js"></script>
