@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TreinoWeb</title>
+
+        <!-- gera o grafico -->
+        <link href="../../css/lib/charts-c3js/c3.min.css" rel="stylesheet" type="text/css">
+
+        <!-- datepicker -->
+        <link rel="stylesheet" href="../../css/lib/bootstrap-datepicker/bootstrap-datepicker.min.css">
+
+
+
+        <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/main.source.css">
+        <link rel="stylesheet" href="../../css/custom.css">
+
+        <!-- alerta -->
+        <link rel="stylesheet" href="../../css/lib/bootstrap-sweetalert/sweetalert.css"/>
+
+    </head>
+    <body class="with-side-menu wet-aspalt-theme">
+
+        <header class="site-header">
+            <div class="container-fluid">
+                <a href="#" class="site-logo"> <img class="hidden-md-down" src="../../img/logo-tw-w-md.png" alt="">
+                    <img class="hidden-lg-up" src="../../img/sign-tw-w-md.png" alt=""> </a>
+                <button class="hamburger hamburger--htla">
+                    <span>menu</span>
+                </button>
+                <div class="site-header-content">
+                    <div class="site-header-content-in">
+                        <div class="site-header-shown">
+                            <div class="dropdown dropdown-notification notif">
+                                <a href="#" class="header-alarm dropdown-toggle active" id="dd-notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="font-icon-alarm"></i> </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
+                                    <div class="dropdown-menu-notif-header">
+                                        Avisos <span class="label label-pill label-danger">4</span>
+                                    </div>
+                                    <div class="dropdown-menu-notif-list">
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-1.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Morgan</a> was bothering about something
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-2.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Lioneli</a> had commented on this
+                                            <a href="#">Super Important Thing</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-3.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-4.jpg" alt="">
+                                            </div>
+                                            <a href="#">Lionely</a> wants to go to
+                                            <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu-notif-more">
+                                        <a href="#">Ver todos</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown user-menu">
+                                <div class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="../../img/avatar-2-64.png" alt="">
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Profile</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Settings</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Help</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>
+                                </div>
+                            </div>
+
+
+                            <button type="button" class="burger-right">
+                                <i class="font-icon-menu-addl"></i>
+                            </button>
+                        </div><!--.site-header-shown-->
+
+                        <div class="mobile-menu-right-overlay"></div>
+                        <div class="site-header-collapsed">
+                            <div class="site-header-collapsed-in">
+                                <div class="dropdown dropdown-typical">
+                                    <a class="dropdown-toggle" id="dd-header-atletas" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-users"></span> <span class="lbl">Atletas</span> </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dd-header-atletas">
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown dropdown-typical">
+                                    <a class="dropdown-toggle" id="dd-header-agenda" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-calendar"></span> <span class="lbl">Agenda</span>
+                                        <span class="label label-pill label-danger">5</span> </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dd-header-agenda">
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal, Quant and Verbal</a>
+                                        <div class="context-menu-separator"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal</a>
+                                        <div class="context-menu-separator"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal</a>
+                                        <div class="context-menu-separator"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown dropdown-typical">
+                                    <a class="dropdown-toggle" id="dd-header-atletas" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-bar-chart"></span> <span class="lbl">Administrativo</span>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dd-header-atletas">
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+                                    </div>
+                                </div>
+                            </div><!--.site-header-collapsed-in-->
+                        </div><!--.site-header-collapsed-->
+                    </div><!--site-header-content-in-->
+                </div><!--.site-header-content-->
+            </div><!--.container-fluid-->
+        </header><!--.site-header-->
+
+        <div class="mobile-menu-left-overlay"></div>
+
+        <nav class="side-menu">
+            <div class="avatar-admin">
+                <img class="img-adaptative" src="../../img/logo-runway.jpg">
+            </div>
+            <header class="side-menu-title mt-md">
+                Opções
+            </header>
+
+            <ul class="side-menu-list">
+
+                <li class="grey">
+                    <a href="#"> <span class="lbl">
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i> Visão geral</span> </a>
+                </li>
+                <li class="grey opened">
+                    <a href="#"> <span class="lbl">
+                        <i class="fa demo-icon icon-pitch" aria-hidden="true"></i> Atletas</span> </a>
+                </li>
+                <li class="grey">
+                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-notebook" aria-hidden="true"></i> Treinadores</span>
+                    </a>
+                </li>
+                <li class="grey">
+                    <a href="#"> <span class="lbl"><i class="fa fa-calendar" aria-hidden="true"></i> Agenda</span> </a>
+                </li>
+                <li class="grey">
+                    <a href="#"> <span class="lbl"><i class="fa fa-money" aria-hidden="true"></i> Financeiro</span> </a>
+                </li>
+            </ul>
+            <header class="side-menu-title mt-md">
+                Conta
+            </header>
+            <ul class="side-menu-list">
+                <li class="grey">
+                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-edit" aria-hidden="true"></i> Dados da conta</span>
+                    </a>
+                </li>
+                <li class="grey">
+                    <a href="#"> <span class="lbl"><i class="fa fa-user-plus" aria-hidden="true"></i> Compartilhamento da conta</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav><!--.side-menu-->
+
+        <div class="page-content">
+            <div class="container-fluid">
+                <header>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h1>Planos</h1>
+                        </div>
+                        <div class="col-sm-8 text-right">
+                            <p>
+                                <a href="#" data-toggle="modal" data-target="#ModalCriaPlano" class="btn btn-rounded btn-inline btn-success-outline"><i class="fa fa-plus" aria-hidden="true"></i> Novo plano</a>
+                            </p>
+                        </div>
+                    </div>
+                </header>
+                <section class="card">
+
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <section>
+                                    <div class="table-responsive">
+                                        <table class="data-table table table-hover fontsize-md">
+                                            <thead>
+                                                <tr>
+                                                    <th>Plano</th>
+                                                    <th>Detalhes</th>
+                                                    <th></th>
+                                                    <th class="text-right">Ações</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td>
+                                                        <p><h5>
+                                                        <strong><a href="#" data-toggle="modal" data-target="#ModalDetalhaPlano">Plano A</a></strong>
+                                                    </h5></p><p>Ativo, 5 atletas</p>
+                                                    </td>
+                                                    <td>
+                                                        <p><strong>Ciclo: </strong>30 dias
+                                                            <span class="ml-md">Plano trial(avaliação)</span></p>
+                                                        <p><strong>Formas: </strong>Cartão / Dinheiro / Boleto</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-danger">
+                                                            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Risco de evasão
+                                                        </p>
+                                                        <p class="text-danger">
+                                                            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 3 boletos em atraso
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn-group btn-group-sm pull-right">
+                                                            <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#ModalEditarPlano"><i class="fa fa-pencil mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#ModalInativar"><i class="fa fa-ban mr-xs" aria-hidden="true"></i> Inativar</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item text-danger swal-btn-cancel" href="#" data-toggle="modal" data-target="#ModalInativar"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                        </table>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div><!--.page-content-->
+
+
+
+
+
+        <!-- Modal detalha -->
+        <div class="modal fade" id="ModalDetalhaPlano" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaPlano">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Detalhes do plano</h4>
+                    </div>
+                    <div class="modal-body">
+                        <section class="card card-default">
+                            <header class="card-header">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h5 class="semibold">
+                                            <i class="fa fa-file-text-o mr-xs" aria-hidden="true"></i> Dados </h5>
+                                    </div>
+                                    <div class="col-md-3 text-right">
+                                        <p>
+                                            <a href="#ModalEditarPlano" data-toggle="modal" data-dismiss="modal">Editar</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold">Nome:</label>
+                                        <p class="text-success">
+                                            <strong>Plano A</strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold">Valor:</label>
+                                        <p>R$ 00,00</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold">Ciclo</label>
+                                        <p>30 dias</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-md">
+                                    <div class="col-sm-6">
+                                        <label class="form-label semibold">Data de criação:</label>
+                                        <p>00/00/0000</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label semibold">Expira em:</label>
+                                        <p>00/00/0000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="card card-default">
+                            <header class="card-header">
+                                <h5 class="semibold">
+                                    <i class="fa fa-line-chart mr-xs" aria-hidden="true"></i> Receita gerada </h5>
+                            </header>
+                            <div class="card-block">
+                                <div id="GraficoReceita" class="highcharts-chart"></div>
+                            </div>
+                        </section>
+
+                        <section class="card card-default">
+                            <header class="card-header">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h5 class="semibold">
+                                            <i class="fa fa-money mr-xs" aria-hidden="true"></i> Cobrança </h5>
+                                    </div>
+                                    <div class="col-md-3 text-right">
+                                        <p>
+                                            <a href="#ModalEditarPlano" data-toggle="modal" data-dismiss="modal">Editar</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold">Nome:</label>
+                                        <p class="text-success">
+                                            <strong>Plano A</strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold">Valor:</label>
+                                        <p>R$ 00,00</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold">Ciclo</label>
+                                        <p>30 dias</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <div class="row mt-md">
+                            <div class="col-sm-12">
+                                <section class="box-typical">
+                                    <header class="box-typical-header header-bordered">
+                                        <div class="tbl-row">
+                                            <div class="tbl-cell tbl-cell-title">
+                                                <h5 class="semibold">
+                                                    <i class="fa fa-calendar-times-o mr-xs" aria-hidden="true"></i> Cobranças em atraso:
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="p-0">
+                                        <div class="table-responsive">
+                                            <table class="table-hover table-box-typical text-center tbl-typical">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <p class="semibold">Nome do atleta</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Setembro</p>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btn-group btn-group-sm pull-right">
+                                                                <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                </button>
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">Gerar cobrança</a>
+                                                                    <a class="dropdown-item" href="#">Gerar comprovante</a>
+                                                                    <a class="dropdown-item" href="#">Confirmar pagamento</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-rounded" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal edita -->
+        <div class="modal fade" id="ModalEditarPlano" tabindex="-1" role="dialog" aria-labelledby="ModalEditarPlano">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Editar plano</h4>
+                    </div>
+                    <div class="modal-body">
+                        <section class="card card-default">
+                            <header class="card-header">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h5 class="semibold">
+                                            <i class="fa fa-file-text-o mr-xs" aria-hidden="true"></i> Dados </h5>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold">Nome<span class="semibold text-danger h4">*</span></label>
+                                            <input type="text" class="form-control" id="" name="nomeservico" placeholder="Nome">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold">Valor</label>
+                                            <input type="text" class="form-control" id="" name="nomeservico" placeholder="Nome">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold">Ciclo (Número)</label>
+                                                    <input type="text" class="form-control" id="" name="nomeservico" placeholder="Nome">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Tipo de ciclo</label>
+                                                    <select class="select2">
+                                                        <option>Selecione</option>
+                                                        <option>Horas</option>
+                                                        <option>Dias</option>
+                                                        <option>Meses</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-md">
+                                    <div class="col-sm-3">
+                                        <label class="form-label semibold">Data de criação:</label>
+                                        <p>00/00/0000</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold">Expira em:</label>
+                                            <input type="text" class="datepicker form-control" placeholder="00/00/0000">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="card card-default">
+                            <header class="card-header">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h5 class="semibold">
+                                            <i class="fa fa-money mr-xs" aria-hidden="true"></i> Formas de pagamento
+                                        </h5>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label> <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-description">Boleto</span> </label> <label>
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-description">Dinheiro</span> </label> <label>
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-description">Cartão,dividido em:</span>
+                                        <input type="text" class="form-control" placeholder="000 vezes"> </label>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold">Valor:</label>
+                                        <p>R$ 00,00</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold">Ciclo</label>
+                                        <p>30 dias</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-md">
+                                    <div class="col-sm-12">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold" for="">Descrição<span class="semibold text-danger h4">*</span></label>
+                                            <textarea rows="4" class="form-control" placeholder="Descrição" id="plano-descricao" name="servicodescricao"></textarea>
+                                            <small>Você tem
+                                                <span id="plano-descricao-counter" class="counter-value semibold"></span> caracteres restantes.
+                                            </small>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success btn-rounded" data-dismiss="modal">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal criar novo -->
+        <div class="modal fade" id="ModalCriaPlano" tabindex="-1" role="dialog" aria-labelledby="ModalCriaPlano">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Criar novo plano</h4>
+                    </div>
+                    <div class="modal-body">
+                        <section class="card card-default">
+                            <header class="card-header">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h5 class="semibold">
+                                            <i class="fa fa-file-text-o mr-xs" aria-hidden="true"></i> Dados </h5>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold">Nome<span class="semibold text-danger h4">*</span></label>
+                                            <input type="text" class="form-control" id="" name="nomeservico" placeholder="Nome">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold">Valor</label>
+                                            <input type="text" class="form-control" id="" name="nomeservico" placeholder="Nome">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold">Ciclo (Número)</label>
+                                                    <input type="text" class="form-control" id="" name="nomeservico" placeholder="Nome">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Tipo de ciclo</label>
+                                                    <select class="select2">
+                                                        <option>Selecione</option>
+                                                        <option>Horas</option>
+                                                        <option>Dias</option>
+                                                        <option>Meses</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-md">
+                                    <div class="col-sm-3">
+                                        <label class="form-label semibold">Data de criação:</label>
+                                        <p>00/00/0000</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold">Expira em:</label>
+                                            <input type="text" class="datepicker form-control" placeholder="00/00/0000">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="card card-default">
+                            <header class="card-header">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h5 class="semibold">
+                                            <i class="fa fa-money mr-xs" aria-hidden="true"></i> Formas de pagamento
+                                        </h5>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label> <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-description">Boleto</span> </label> <label>
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-description">Dinheiro</span> </label> <label>
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-description">Cartão,dividido em:</span>
+                                        <input type="text" class="form-control" placeholder="000 vezes"> </label>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold">Valor:</label>
+                                        <p>R$ 00,00</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold">Ciclo</label>
+                                        <p>30 dias</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-md">
+                                    <div class="col-sm-12">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold" for="">Descrição<span class="semibold text-danger h4">*</span></label>
+                                            <textarea rows="4" class="form-control" placeholder="Descrição" id="plano-criar" name="servicodescricao"></textarea>
+                                            <small>Você tem
+                                                <span id="plano-criar-counter" class="counter-value semibold"></span> caracteres restantes.
+                                            </small>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success btn-rounded" data-dismiss="modal">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../../js/lib/jquery/jquery.min.js"></script>
+        <script src="../../js/lib/jqueryui/jquery-ui.min.js"></script>
+        <script src="../../js/lib/tether/tether.min.js"></script>
+        <script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
+        <script src="../../js/plugins.js"></script>
+
+        <!-- gera o grafico -->
+        <script type="text/javascript" src="../../js/lib/highcharts/highcharts.js"></script>
+
+        <script src="../../js/lib/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+        <script src="../../js/lib/bootstrap-datepicker/bootstrap-datepicker.pt-BR.min.js"></script>
+
+        <script src="../../js/lib/select2/select2.full.min.js"></script>
+        <script src="../../js/lib/select2/i18n/pt-BR.js"></script>
+        <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+
+        <script src="../../js/lib/jquery-simply-countable/jquery.simplyCountable.js"></script>
+
+        <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+
+        <script src="../../js/app.js"></script>
+        <script src="admin-planos.js"></script>
+        <script src="../../js/interface.js"></script>
+
+    </body>
+</html>

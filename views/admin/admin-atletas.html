@@ -171,7 +171,8 @@
                         <i class="fa demo-icon icon-pitch" aria-hidden="true"></i> Atletas</span> </a>
                 </li>
                 <li class="grey">
-                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-notebook" aria-hidden="true"></i> Treinadores</span> </a>
+                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-notebook" aria-hidden="true"></i> Treinadores</span>
+                    </a>
                 </li>
                 <li class="grey">
                     <a href="#"> <span class="lbl"><i class="fa fa-calendar" aria-hidden="true"></i> Agenda</span> </a>
@@ -185,10 +186,12 @@
             </header>
             <ul class="side-menu-list">
                 <li class="grey">
-                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-edit" aria-hidden="true"></i> Dados da conta</span> </a>
+                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-edit" aria-hidden="true"></i> Dados da conta</span>
+                    </a>
                 </li>
                 <li class="grey">
-                    <a href="#"> <span class="lbl"><i class="fa fa-user-plus" aria-hidden="true"></i> Compartilhamento da conta</span> </a>
+                    <a href="#"> <span class="lbl"><i class="fa fa-user-plus" aria-hidden="true"></i> Compartilhamento da conta</span>
+                    </a>
                 </li>
             </ul>
 
@@ -278,13 +281,13 @@
                             <div class="col-sm-12">
                                 <section>
                                     <div class="table-responsive table-custom">
-                                        <table class="data-table table table-hover">
+                                        <table class="data-table table table-hover fontsize-md">
                                             <thead>
                                                 <tr>
                                                     <th></th>
                                                     <th></th>
                                                     <th>Nome</th>
-                                                    <th>Pagamento</th>
+                                                    <th>Plano/Pagamento</th>
                                                     <th>Treinador</th>
                                                     <th>Risco</th>
                                                     <th class="text-right">Ações</th>
@@ -299,13 +302,13 @@
                                                         </div>
                                                     </td>
                                                     <td class="table-photo">
-                                                        <img src="../../img/photo-64-1.jpg" alt="" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Nicholas<br/>Barrett">
+                                                        <img src="../../img/photo-64-1.jpg" alt="" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="João<br/>Silva">
                                                     </td>
                                                     <td>
-                                                        João da Silva Xavier
+                                                        <a href="#ModalDetalhaAtleta" data-toggle="modal" data-dismiss="modal"><strong>João da Silva Xavier</strong></a>
                                                     </td>
                                                     <td>
-                                                        Ativo / Pagamento ok
+                                                        Ativo / Pagamento ok<br> Plano A
                                                     </td>
                                                     <td>
                                                         Nome do treinador <br> <a href="#">Treinos</a>
@@ -318,10 +321,11 @@
                                                             <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
                                                             </button>
                                                             <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
-                                                                <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                <a class="dropdown-item" href="#"><i class="fa fa-money mr-xs" aria-hidden="true"></i> Gerar cobrança</a>
+                                                                <a class="dropdown-item" href="#"><i class="fa fa-check mr-xs" aria-hidden="true"></i> Confirmar pagamento</a>
+                                                                <a class="dropdown-item" href="#"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i> Trocar plano</a>
                                                                 <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#ModalInativar"><i class="fa fa-ban mr-xs" aria-hidden="true"></i> Inativar</a>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -336,8 +340,6 @@
 
             </div>
         </div><!--.page-content-->
-
-
 
 
         <div class="modal fade" id="ModalEnviarConvite" tabindex="-1" role="dialog" aria-labelledby="ModalEnviarConvite" aria-hidden="true">
@@ -362,7 +364,122 @@
                     </div>
                 </div>
             </div>
-        </div><!--.modal ModalLembrarSenha-->
+        </div><!--.modal ModalEnviarConvite-->
+
+        <div class="modal fade" id="ModalInativar" tabindex="-1" role="dialog" aria-labelledby="ModalInativar" aria-hidden="true">
+            <div class="modal-dialog modal-center-v">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+                            <i class="font-icon-close-2"></i>
+                        </button>
+                        <h4 class="modal-title">Inativar usuário</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="col-md-6">
+                                <section class="card">
+                                    <header class="card-header card-header-lg">
+                                        <h4>Atleta</h4>
+                                    </header>
+                                    <div class="card-block">
+                                        <div class="user-card-row">
+                                            <div class="tbl-row">
+                                                <div class="tbl-cell tbl-cell-photo tbl-cell-photo-64">
+                                                    <a href="#"> <img src="../../img/photo-64-1.jpg" alt=""> </a>
+                                                </div>
+                                                <div class="tbl-cell">
+                                                    <p class="user-card-row-name font-16">
+                                                        <a href="#">Gerald Davidson</a></p>
+                                                    <p class="user-card-row-mail font-14">
+                                                        <a href="#">Treinador: José da Silva</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="col-md-6">
+                                <section class="card">
+                                    <header class="card-header card-header-lg">
+                                        <h4>Plano <strong>A</strong></h4>
+                                    </header>
+                                    <div class="card-block">
+                                        <p class="card-text">Este usuário esta assossiado a este plano.</p>
+                                        <p class="divider-top"><strong>Situação:</strong> Ativo</p>
+                                        <p><strong>Pagamento:</strong> Sem pendências</p>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-rounded btn-danger">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--.modal ModalInativar-->
+
+
+
+
+
+        <div class="modal fade" id="ModalDetalhaAtleta" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaAtleta" aria-hidden="true">
+            <div class="modal-dialog modal-center-v">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+                            <i class="font-icon-close-2"></i>
+                        </button>
+                        <h4 class="modal-title">Inativar usuário</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="col-md-6">
+                                <section class="card">
+                                    <header class="card-header card-header-lg">
+                                        <h4>Atleta</h4>
+                                    </header>
+                                    <div class="card-block">
+                                        <div class="user-card-row">
+                                            <div class="tbl-row">
+                                                <div class="tbl-cell tbl-cell-photo tbl-cell-photo-64">
+                                                    <a href="#"> <img src="../../img/photo-64-1.jpg" alt=""> </a>
+                                                </div>
+                                                <div class="tbl-cell">
+                                                    <p class="user-card-row-name font-16">
+                                                        <a href="#">Gerald Davidson</a></p>
+                                                    <p class="user-card-row-mail font-14">
+                                                        <a href="#">Treinador: José da Silva</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="col-md-6">
+                                <section class="card">
+                                    <header class="card-header card-header-lg">
+                                        <h4>Plano <strong>A</strong></h4>
+                                    </header>
+                                    <div class="card-block">
+                                        <p class="card-text">Este usuário esta assossiado a este plano.</p>
+                                        <p class="divider-top"><strong>Situação:</strong> Ativo</p>
+                                        <p><strong>Pagamento:</strong> Sem pendências</p>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-rounded btn-danger">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--.modal ModalInativar-->
+
 
 
 
