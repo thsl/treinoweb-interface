@@ -11,7 +11,7 @@ $(document).ready(function () {
     });
     //Ativa checkboxes
     $('.checkbox').prop('indeterminate', true);
-    
+
 });
 
 
