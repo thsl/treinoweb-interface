@@ -10,5 +10,8 @@ $(document).ready(function () {
         language: 'pt-BR'
     });
     //Ativa checkboxes
-    $('.checkbox').prop('indeterminate', true)
+    $('.checkbox').prop('indeterminate', true);
+    
 });
+
+
