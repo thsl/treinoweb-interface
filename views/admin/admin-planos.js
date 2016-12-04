@@ -41,6 +41,13 @@ $(document).ready(function () {
         countDirection: 'down',
         maxCount: 150
     });
+    $('#plano-criar-novo').simplyCountable({
+        counter: '#plano-criar-counter-novo',
+        countType: 'characters',
+        strictMax: true,
+        countDirection: 'down',
+        maxCount: 150
+    });
 
 
     // alerta de exclusão
@@ -76,5 +83,8 @@ $(document).ready(function () {
             });
     });
 
-
+    $('.datepicker').datepicker({
+        format: 'dd/mm/yyyy',
+        language: 'pt-BR'
+    });
 });
