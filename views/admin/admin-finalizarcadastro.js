@@ -1,5 +1,4 @@
 // gera o grafico
-
-$(document).ready(function () {
-
+$("#check-termos-servico").click(function() {
+    $("#btn-termos-servico").attr("disabled", !this.checked);
 });

@@ -1,23 +1,4 @@
-// Coisas genéricas para TODA a interface
-$(document).ready(function () {
-// Traduz o select2
-    $(".select2").select2({
-        "language": "pt-BR"
-    });
 
-
-    // faz o dropdown funcionar no mobile (mas tem que remover a tag 'data-toggle="dropdown"', e acrescentar a classe na div mãe do dropdown "dropdown-custom")
-    $('.dropdown-custom .dropdown-toggle').on('click', function (event) {
-        $(this).parent().toggleClass("open");
-    });
-
-    $('body').on('click', function (e) {
-        if (!$('.dropdown-custom').is(e.target) && $('.dropdown-custom').has(e.target).length === 0 && $('.open').has(e.target).length === 0) {
-            $('.dropdown-custom').removeClass('open');
-        }
-    });
-
-});
 
 
 $(document).ready(function () {
@@ -44,4 +25,28 @@ $(document).ready(function () {
     $(window).on('popstate', function () {
         $(".modal").modal('hide');
     });
+});
+
+
+// Coisas genéricas para TODA a interface
+$(document).ready(function () {
+    // faz o dropdown funcionar no mobile (mas tem que remover a tag 'data-toggle="dropdown"', e acrescentar a classe na div mãe do dropdown "dropdown-custom")
+    $('.dropdown-custom .dropdown-toggle').on('click', function (event) {
+        $(this).parent().toggleClass("open");
+    });
+
+    $('body').on('click', function (e) {
+        if (!$('.dropdown-custom').is(e.target) && $('.dropdown-custom').has(e.target).length === 0 && $('.open').has(e.target).length === 0) {
+            $('.dropdown-custom').removeClass('open');
+        }
+    });
+
+// Traduz o select2
+    $(".select2").select2({
+        "language": "pt-BR"
+    });
+
+
+
+
 });
