@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TreinoWeb</title>
+        <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/main.source.css">
+        <link rel="stylesheet" href="../../css/custom.css">
+
+        <!-- especifico desta página -->
+        <link href="../../css/lib/charts-c3js/c3.min.css" rel="stylesheet" type="text/css">
+
+    </head>
+    <body class="with-side-menu wet-aspalt-theme">
+
+        <header class="site-header">
+            <div class="container-fluid">
+                <a href="#" class="site-logo"> <img class="hidden-md-down" src="../../img/logo-tw-w-md.png" alt="">
+                    <img class="hidden-lg-up" src="../../img/sign-tw-w-md.png" alt=""> </a>
+                <button class="hamburger hamburger--htla">
+                    <span>menu</span>
+                </button>
+                <div class="site-header-content">
+                    <div class="site-header-content-in">
+                        <div class="site-header-shown">
+                            <div class="dropdown dropdown-notification notif dropdown-custom">
+                                <a href="#" class="header-alarm dropdown-toggle active" id="dd-notification" aria-haspopup="true" aria-expanded="false">
+                                    <i class="font-icon-alarm"></i> </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
+                                    <div class="dropdown-menu-notif-header">
+                                        Avisos <span class="label label-pill label-danger">4</span>
+                                    </div>
+                                    <div class="dropdown-menu-notif-list">
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-1.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="http://globo.com">Morgan</a> was bothering about something
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-2.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Lioneli</a> had commented on this
+                                            <a href="#">Super Important Thing</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-3.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-4.jpg" alt="">
+                                            </div>
+                                            <a href="#">Lionely</a> wants to go to
+                                            <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu-notif-more">
+                                        <a href="#">Ver todos</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown user-menu dropdown-custom">
+                                <div class="dropdown-toggle" id="dd-user-menu" type="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="../../img/avatar-2-64.png" alt="">
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Profile</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Settings</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Help</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>
+                                </div>
+                            </div>
+
+
+                            <button type="button" class="burger-right">
+                                <i class="font-icon-menu-addl"></i>
+                            </button>
+                        </div><!--.site-header-shown-->
+
+                        <div class="mobile-menu-right-overlay"></div>
+                        <div class="site-header-collapsed">
+                            <div class="site-header-collapsed-in">
+                                <div class="dropdown dropdown-typical dropdown-custom">
+                                    <a class="dropdown-toggle" id="dd-header-atletas" data-target="#" href="#" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-users"></span> <span class="lbl">Atletas</span> </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dd-header-atletas">
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown dropdown-typical dropdown-custom">
+                                    <a class="dropdown-toggle" id="dd-header-agenda" data-target="#" href="#" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-calendar"></span> <span class="lbl">Agenda</span>
+                                        <span class="label label-pill label-danger">5</span> </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dd-header-agenda">
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal, Quant and Verbal</a>
+                                        <div class="context-menu-separator"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal</a>
+                                        <div class="context-menu-separator"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal</a>
+                                        <div class="context-menu-separator"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <small>00/00/0000, 10h00</small>
+                                            <br>Quant and Verbal</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown dropdown-typical dropdown-custom">
+                                    <a class="dropdown-toggle" id="dd-header-atletas" data-target="#" href="#" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-bar-chart"></span> <span class="lbl">Administrativo</span>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dd-header-atletas">
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+                                        <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+                                    </div>
+                                </div>
+                            </div><!--.site-header-collapsed-in-->
+                        </div><!--.site-header-collapsed-->
+                    </div><!--site-header-content-in-->
+                </div><!--.site-header-content-->
+            </div><!--.container-fluid-->
+        </header><!--.site-header-->
+
+        <div class="mobile-menu-left-overlay"></div>
+
+        <nav class="side-menu">
+            <div class="avatar-admin">
+                <img class="img-adaptative" src="../../img/logo-runway.jpg">
+
+                <div class="divider-top">
+                    <p>
+                        Treinador<br>
+                        <a class="fontsize-sm" href="#" data-toggle="modal" data-target="#ModalTrocaAssessoria"><i class="fa fa-refresh" aria-hidden="true"></i> Trocar assessoria</a>
+                    </p>
+                </div>
+            </div>
+            <header class="side-menu-title">
+                Opções
+            </header>
+
+            <ul class="side-menu-list">
+
+                <li class="grey opened">
+                    <a href="#"> <span class="lbl">
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i> Visão geral</span> </a>
+                </li>
+                <li class="grey">
+                    <a href="#"> <span class="lbl">
+                        <i class="fa demo-icon icon-pitch" aria-hidden="true"></i> Atletas</span> </a>
+                </li>
+                <li class="grey">
+                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-notebook" aria-hidden="true"></i> Treinadores</span>
+                    </a>
+                </li>
+                <li class="grey">
+                    <a href="#"> <span class="lbl"><i class="fa fa-calendar" aria-hidden="true"></i> Agenda</span> </a>
+                </li>
+                <li class="grey">
+                    <a href="#"> <span class="lbl"><i class="fa fa-money" aria-hidden="true"></i> Financeiro</span> </a>
+                </li>
+            </ul>
+            <header class="side-menu-title mt-md">
+                Conta
+            </header>
+            <ul class="side-menu-list">
+                <li class="grey">
+                    <a href="#"> <span class="lbl"><i class="font-icon font-icon-edit" aria-hidden="true"></i> Dados da conta</span>
+                    </a>
+                </li>
+                <li class="grey">
+                    <a href="#">
+                        <span class="lbl"><i class="fa fa-user-plus" aria-hidden="true"></i> Compartilhamento</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav><!--.side-menu-->
+
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>Fluxo de caixa</h1>
+                    </div>
+                </div>
+                <div class="form-group row mt-md divider-bottom">
+                    <label for="" class="col-sm-1 col-form-label text-right mt-sm">Período:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-sm datetimepicker" placeholder="00/00/0000">
+                    </div>
+                    <label for="" class="col-sm-1 col-form-label text-center mt-sm">a</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-sm datetimepicker" placeholder="00/00/0000">
+                    </div>
+                </div>
+                <section>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="chart-statistic-box">
+                                <div class="chart-txt">
+                                    <div class="chart-txt-top">
+                                        <p><span class="unit">R$</span><span class="number">1540</span></p>
+                                        <p class="caption">Faturamento 11/2016</p>
+                                    </div>
+                                    <table class="tbl-data">
+                                        <tr>
+                                            <td class="price color-green">R$ 2200,00</td>
+                                            <td><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="price color-red">- R$ 600,00</td>
+                                            <td><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="chart-container">
+                                    <div class="chart-container-in">
+                                        <div id="chart_div"></div>
+                                        <header class="chart-container-title">Média semanal</header>
+                                        <div class="chart-container-x">
+                                            <div class="item"></div>
+                                            <div class="item">Seg</div>
+                                            <div class="item">Ter</div>
+                                            <div class="item">Qua</div>
+                                            <div class="item">Qui</div>
+                                            <div class="item">Sex</div>
+                                            <div class="item">Sáb</div>
+                                            <div class="item">Dom</div>
+                                            <div class="item"></div>
+                                        </div>
+                                        <div class="chart-container-y">
+                                            <div class="item">300</div>
+                                            <div class="item"></div>
+                                            <div class="item">250</div>
+                                            <div class="item"></div>
+                                            <div class="item">200</div>
+                                            <div class="item"></div>
+                                            <div class="item">150</div>
+                                            <div class="item"></div>
+                                            <div class="item">100</div>
+                                            <div class="item"></div>
+                                            <div class="item">50</div>
+                                            <div class="item"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--.chart-statistic-box-->
+                        </div><!--.col-->
+                        <div class="col-md-4">
+                            <section class="card">
+                                <div class="card-block">
+                                    <div id="donut-chart"></div>
+                                </div>
+                            </section>
+                        </div>
+                    </div><!--.row-->
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <section class="tabs-section">
+                                <div class="tabs-section-nav tabs-section-nav-inline">
+                                    <ul class="nav" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#tabs-4-tab-1" role="tab" data-toggle="tab"> Todos </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabs-4-tab-2" role="tab" data-toggle="tab"> Receitas </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabs-4-tab-3" role="tab" data-toggle="tab"> Despesas </a>
+                                        </li>
+                                    </ul>
+                                </div><!--.tabs-section-nav-->
+
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="tabs-4-tab-1">
+                                        <header>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h4>Tabelas de fluxo</h4>
+                                                </div>
+                                                <div class="col-sm-8 text-right">
+                                                    <p>
+                                                        <a href="#" data-toggle="modal" data-target="#ModalCriaTransac" class="btn btn-rounded btn-inline btn-success-outline btn-sm"><i class="fa fa-plus" aria-hidden="true"></i> Adicionar transação</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <section>
+                                            <div class="table-responsive table-custom">
+                                                <table id="data-table" class="data-table table table-hover fontsize-md">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Data</th>
+                                                            <th>Descrição</th>
+                                                            <th>Tipo</th>
+                                                            <th>Valor</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="table-check">
+                                                                <div class="checkbox checkbox-only mr-sm">
+                                                                    <input type="checkbox" id="table-check-1">
+                                                                    <label for="table-check-1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                00/00/0000 - Segunda-feira
+                                                            </td>
+                                                            <td>
+                                                                Compras ABC
+                                                            </td>
+                                                            <td>
+                                                                <strong class="text-danger">Despesa</strong>
+                                                            </td>
+                                                            <td>
+                                                                <strong class="text-danger">-R$ 55,00</strong>
+                                                            </td>
+                                                            <td class="text-right">
+                                                                <div class="btn-group btn-group-sm dropdown-custom pull-right">
+                                                                    <button type="button" class="btn btn-default-outline dropdown-toggle" aria-haspopup="true" aria-expanded="false">Ações
+                                                                    </button>
+                                                                    <div class="dropdown-menu">
+                                                                        <a href="#" class="dropdown-item" data-toggle="modal" data-target="#ModalCriaTransac" role="button"><i class="fa fa-pencil mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                        <a class="dropdown-item text-danger swal-btn-cancel" href="#" role="button"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="4" class="text-right">
+                                                                <p class="h4">Total:</p>
+                                                            </td>
+                                                            <td>
+                                                                <p class="h3">R$ 000,00</p>
+                                                            </td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </section>
+                                    </div><!--.tab-pane-->
+                                    <div role="tabpanel" class="tab-pane fade" id="tabs-4-tab-2">Tab 2</div><!--.tab-pane -->
+                                    <div role="tabpanel" class="tab-pane fade" id="tabs-4-tab-3">Tab 3</div><!--.tab-pane-->
+                                </div><!--.tab-content-->
+                            </section><!--.tabs-section-->
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div><!--.page-content-->
+
+
+        <div class="modal fade" id="ModalCriaTransac" role="dialog" aria-labelledby="ModalCriaTransac">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Nova transação</h4>
+                    </div>
+                    <div class="modal-body">
+                        <section class="card card-default">
+                            <header class="card-header">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h5 class="semibold">
+                                            <i class="fa fa-file-text-o mr-xs" aria-hidden="true"></i> Dados </h5>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold">Data<span class="semibold text-danger h4">*</span></label>
+                                            <input type="text" class="form-control form-control-sm datetimepicker" placeholder="00/00/0000">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold">Valor</label>
+                                            <input type="text" class="form-control" id="" name="nomeservico" placeholder="Nome">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold" for="">Tipo</label>
+                                        <div class="form-group">
+                                            <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                <label class="btn btn-secondary-outline">
+                                                    <input type="radio" name="options" id="" autocomplete="off"> Receita
+                                                </label> <label class="btn btn-secondary-outline">
+                                                <input type="radio" name="options" id="" autocomplete="off"> Despesa
+                                            </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row mt-md">
+                                    <div class="col-sm-12">
+                                        <fieldset class="form-group">
+                                            <label class="form-label semibold" for="">Descrição<span class="semibold text-danger h4">*</span></label>
+                                            <textarea rows="4" class="form-control" placeholder="Descrição" id="transact-descricao" name=""></textarea>
+                                            <small>Você tem
+                                                <span id="transact-descricao-counter" class="counter-value semibold"></span> caracteres restantes.
+                                            </small>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success btn-rounded" data-dismiss="modal">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../../js/lib/jquery/jquery.min.js"></script>
+        <script src="../../js/lib/tether/tether.min.js"></script>
+        <script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
+        <script src="../../js/plugins.js"></script>
+        <script src="../../js/app.js"></script>
+
+        <!-- específico desta página -->
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="../../js/lib/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+
+
+        <script src="../../js/lib/d3/d3.min.js"></script>
+        <script src="../../js/lib/charts-c3js/c3.min.js"></script>
+        <script src="../../js/lib/charts-c3js/c3js-init.js"></script>
+
+        <script src="../../js/lib/jquery-simply-countable/jquery.simplyCountable.js"></script>
+
+
+        <script src="../../js/interface.js"></script>
+        <script src="admin-fluxo.js"></script>
+
+    </body>
+</html>

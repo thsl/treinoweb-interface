@@ -113,3 +113,11 @@ $(document).ready(function () {
         }
     });
 });
+// contador de caracteres
+$('#transact-descricao').simplyCountable({
+    counter: '#transact-descricao-counter',
+    countType: 'characters',
+    strictMax: true,
+    countDirection: 'down',
+    maxCount: 150
+});

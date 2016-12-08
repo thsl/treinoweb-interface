@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function () {
 // isso tudo faz o botão de voltar fechar a modal (melhora a usabilidade )
     $('.modal').on('shown', function () {
@@ -40,13 +37,5 @@ $(document).ready(function () {
             $('.dropdown-custom').removeClass('open');
         }
     });
-
-// Traduz o select2
-    $(".select2").select2({
-        "language": "pt-BR"
-    });
-
-
-
 
 });
